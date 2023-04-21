@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.gjs.pom</groupId>
+		<artifactId>nar-parent-pom</artifactId>
+		<version>1.0.0</version>
+		<relativePath></relativePath>
+	</parent>
+
+    <artifactId>cpp-parent-pom</artifactId>
+	<packaging>pom</packaging>
+	
+	<name>Maven C++ NAR Parent Pom</name>
+	<description>Parent pom for C++ projects using the nar-maven-plugin.</description>
+	
+	<properties>
+		<compiler>g++</compiler>
+		<linker>g++</linker>
+		
+		<compilerLanguage>c++</compilerLanguage>
+		<languageStandard>c++14</languageStandard>
+		<!-- TODO: Asegurar que cppcheck es la última version. La version actual que tengo no implementa C++20 por eso hay que usar la c++14 -->
+		<cppVersion>20</cppVersion>
+		<cppOption>--std=c++${cppVersion}</cppOption>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+		</dependencies>
+	</dependencyManagement>
+	
+	<profiles>
+		<profile>
+			<id>cpp</id>
+			<build>	
+				<plugins>
+					<plugin>
+						<groupId>com.github.maven-nar</groupId>
+						<artifactId>nar-maven-plugin</artifactId>
+						<configuration>
+							<cpp>
+								<options combine.children="append">
+									<option>${cppOption}</option>
+								</options>
+
+								<includePaths combine.children="append">
+									<includePath>
+										<path>${glibDirInclude}</path>
+									</includePath>
+								</includePaths>						
+							</cpp>
+							
+							<linker>
+								<testOptions combine.children="append">
+									<!--option> -Wl,++wrap=exit</option--> 
+									<!--option> -Wl,++wrap=getenv</option--> 
+								</testOptions>
+							</linker>
+							
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>	
+		</profile>	
+	
+	</profiles>	
+</project>
