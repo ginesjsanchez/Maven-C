@@ -8,22 +8,25 @@
 
 	<name>Maven C/C++ Parent Pom</name>
 	<description>Maven C/C++ general parent pom.
-
-					Pom organization:
-
-					/parent-pom
-						|
-						|--/nar-parent-pom
-								|
-								|--/c-parent-pom
-								|
-								|--/cpp-parent-pom
-										|
-										|--/lib-parent-pom
-										|
-										|--/stlib-parent-pom
-										|
-										|--/exe-parent-pom
+				.
+				.	Pom organization:
+				.
+				.	/parent-pom
+				.		|
+				.		|--/nar-parent-pom
+				.				|
+				.				|--/c-parent-pom
+				.				|
+				.				|--/cpp-parent-pom
+				.						|
+				.						|--/lib-parent-pom
+				.						|
+				.						|--/stlib-parent-pom
+				.						|
+				.						|--/exe-parent-pom
+				.
+				.   Profile: cpp
+				.
 	</description>
 	<inceptionYear>2023</inceptionYear>
 
@@ -38,7 +41,7 @@
 			<email>gjs@gmx.es</email>
 			<roles>
 				<role>Master</role>
-			<roles>
+			</roles>
 			<timezone>+1</timezone>			
 		</developer>
 	</developers>
@@ -122,11 +125,6 @@
 					<version>3.5.2</version>
 				</plugin>
 				-->
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>wagon-maven-plugin</artifactId>
-					<version>2.0.2</version>
-				</plugin>
 			</plugins>
 		</pluginManagement>		
 

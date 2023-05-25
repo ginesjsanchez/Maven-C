@@ -70,21 +70,24 @@
 		<!-- Ejecutables auxiliares -->
 		<gcovr>/ust/bin/gcovr</gcovr> 
 	</properties>
+
+	<build>	
+		<pluginManagement>				
+			<plugins>
+				<plugin>
+					<groupId>com.github.maven-nar</groupId>
+					<artifactId>nar-maven-plugin</artifactId>
+					<version>${nar.version}</version>
+					<extensions>true</extensions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 	
 	<profiles>
 		<profile>
 			<id>cpp</id>
 			<build>	
-				<pluginManagement>				
-					<plugins>
-						<plugin>
-							<groupId>com.github.maven-nar</groupId>
-							<artifactId>nar-maven-plugin</artifactId>
-							<version>${nar.version}</version>
-							<extensions>true</extensions>
-						</plugin>
-					</plugins>
-				</pluginManagement>
 				
 				<plugins>
 					<plugin>

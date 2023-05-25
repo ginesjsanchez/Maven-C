@@ -5,7 +5,7 @@
 		<groupId>org.gjs.pom</groupId>
 		<artifactId>nar-parent-pom</artifactId>
 		<version>1.0.0</version>
-		<relativePath>..nar-parent-pom</relativePath>
+		<relativePath>../nar-parent-pom</relativePath>
 	</parent>
 
     <artifactId>c-parent-pom</artifactId>

@@ -3,12 +3,12 @@
 
 	<parent>
 		<groupId>org.gjs.pom</groupId>
-		<artifactId>cppParentPom</artifactId>
+		<artifactId>cpp-parent-pom</artifactId>
 		<version>1.0.0</version>
-		<relativePath></relativePath>
+		<relativePath>../cpp-parent-pom</relativePath>
 	</parent>
 
-    <artifactId>exeParentPom</artifactId>
+    <artifactId>exe-parent-pom</artifactId>
 	<packaging>pom</packaging>
 
 	<name>Maven C++ Executable Parent Pom</name>
