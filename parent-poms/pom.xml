@@ -15,9 +15,12 @@
 		<module>nar-parent-pom</module>
 		<module>c-parent-pom</module>
 		<module>cpp-parent-pom</module>
-		<module>lib-parent-pom</module>
-		<module>stlib-parent-pom</module>
-		<module>exe-parent-pom</module>
+		<module>lib-c-parent-pom</module>
+		<module>stlib-c-parent-pom</module>
+		<module>exe-c-parent-pom</module>
+		<module>lib-cpp-parent-pom</module>
+		<module>stlib-cpp-parent-pom</module>
+		<module>exe-cpp-parent-pom</module>
 	</modules>
 
 </project>

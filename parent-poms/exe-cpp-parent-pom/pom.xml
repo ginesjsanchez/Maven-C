@@ -8,7 +8,7 @@
 		<relativePath>../cpp-parent-pom</relativePath>
 	</parent>
 
-    <artifactId>exe-parent-pom</artifactId>
+    <artifactId>exe-cpp-parent-pom</artifactId>
 	<packaging>pom</packaging>
 
 	<name>Maven C++ Executable Parent Pom</name>
