@@ -43,6 +43,10 @@
 		<finalName.prefix></finalName.prefix>
 		<finalName>${finalName.prefix}${project.artifactId}-${osName}-${project.version}</finalName>
 			
+		<!-- Common libraries -->
+		<sslDirInclude>${sslDir}/include</sslDirInclude>
+		<sslDirLib>${sslDir}/lib</sslDirLib>
+
 		<!-- Opciones cppcheck -->
 		<check.execute>true</check.execute>
 		<check.severity>all</check.severity>	
@@ -182,7 +186,6 @@
 											<arg value="-I${glibDirInclude}"/>
 											<arg value="-I${sslDirInclude}"/>
 											<arg value="-I${oraDirInclude}"/>
-											<arg value="-I${xmlDirInclude}"/>
 											<arg value="-I${sysIncDir}"/>
 											<arg value="-I${sysIncDir2}"/>	
 											<arg value="--suppress=virtualCallInConstructor"/>
@@ -239,12 +242,6 @@
 									<option>-fabi-version=0</option>
 									<option>-O${optimizationLevel}</option> 
 									<option>-Wall</option> 
-									<option>-Wno-switch</option> 
-									<option>-Wno-sign-compare</option> 
-									<option>-Wno-pointer-arith</option>
-									<option>-Wno-conversion-null</option>
-									<option>-Wno-write-strings</option>
-									<option>-Wunused-result</option>
 									<option>${localeOption}</option>
 									<option>${platformOptions}</option>
 								</options>

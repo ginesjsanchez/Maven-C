@@ -23,6 +23,8 @@
 		<!-- TODO: Asegurar que cppcheck es la última version. La version actual que tengo no implementa C++20 por eso hay que usar la c++14 -->
 		<cppVersion>20</cppVersion>
 		<cppOption>--std=c++${cppVersion}</cppOption>
+		
+		<glibDirInclude>${sysIncDir}/glib-2.0</glibDirInclude>
 	</properties>
 	
 	<dependencyManagement>
